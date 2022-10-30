@@ -18,6 +18,7 @@ class MovieAdapter (
             itemView.movie_title.text = movie.title
             itemView.movie_release_date.text = movie.release
             itemView.language.text = movie.language
+            itemView.overview.text = movie.overview
             Glide.with(itemView).load(IMAGE_BASE + movie.poster).into(itemView.movie_poster)
         }
     }

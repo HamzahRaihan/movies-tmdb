@@ -22,10 +22,10 @@
 
     <TextView
         android:id="@+id/movie_title"
-        android:layout_width="231dp"
-        android:layout_height="48dp"
+        android:layout_width="233dp"
+        android:layout_height="39dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="4dp"
         android:text="Movie Title"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
@@ -39,8 +39,8 @@
         android:id="@+id/movie_release_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="4dp"
         android:text="Release Data"
         android:textColor="#C14B4B"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:text="Release date:"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,17 +67,31 @@
         android:text="Original Language:"
         android:textColor="#FFFFFF"
         android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/movie_poster"
-        app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+        app:layout_constraintBottom_toTopOf="@+id/netflox_title"
+        app:layout_constraintStart_toEndOf="@+id/movie_poster" />
 
     <TextView
         android:id="@+id/language"
         android:layout_width="78dp"
         android:layout_height="15dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="8dp"
         android:text="movie language"
         android:textColor="#FFFFFF"
         android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/movie_release_date"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/overview"
+        android:layout_width="230dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:autoText="false"
+        android:text="overview"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/movie_poster"
         app:layout_constraintTop_toBottomOf="@+id/movie_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>
