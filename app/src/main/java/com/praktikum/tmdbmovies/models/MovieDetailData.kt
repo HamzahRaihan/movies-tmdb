@@ -1,29 +1,23 @@
 package com.praktikum.tmdbmovies.models
 
-
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class Movie(
+data class MovieDetailData(
     @SerializedName("imdb_id")
-    val id : String ?,
+    val id : String?,
 
     @SerializedName("title")
-    val title : String ?,
+    val title : String,
 
     @SerializedName("overview")
-    val overview : String?,
-
-    @SerializedName("original_language")
-    val language: String?,
+    val overview : String,
 
     @SerializedName("poster_path")
     val poster : String?,
 
-    @SerializedName("release_date")
-    val release : String?
 ) : Parcelable {
-    constructor(): this("" , "", "", "", "", "")
+    constructor(): this("" , "", "", "")
 }

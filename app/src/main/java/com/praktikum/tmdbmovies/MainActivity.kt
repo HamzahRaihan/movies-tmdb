@@ -23,8 +23,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getMovieData(callback: (List<Movie>) -> Unit){
+        val apikey = "54e056562f9604d3a1437ea513c7d945"
         val apiService = MovieApiService.getInstance().create(MovieApiInterface::class.java)
-        apiService.getMovieList().enqueue(object : Callback<MovieResponse> {
+        apiService.getMovieList(apikey).enqueue(object : Callback<MovieResponse> {
             override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
                 return callback(response.body()!!.movies)
             }
