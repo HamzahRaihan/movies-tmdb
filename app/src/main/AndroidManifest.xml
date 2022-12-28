@@ -29,6 +29,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".FavoriteMovieActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
     </application>

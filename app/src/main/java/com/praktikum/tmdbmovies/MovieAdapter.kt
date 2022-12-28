@@ -11,7 +11,14 @@ import kotlinx.android.synthetic.main.movie_item.view.*
 
 class MovieAdapter (
     private val movies : List<Movie>
+
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>(){
+
+    private var callback: ((movie: Movie) -> Unit)? = null
+    private var addToFavorite: ((movie: Movie) -> Unit)? = null
+    private var deleteFromFavorite: ((movie: Movie) -> Unit)? = null
+
+    private var isFavorite: Boolean = false
 
     class MovieViewHolder(view : View) : RecyclerView.ViewHolder(view){
         private val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
@@ -20,11 +27,12 @@ class MovieAdapter (
             itemView.movie_release_date.text = movie.release
             itemView.language.text = movie.language
             itemView.overview.text = movie.overview
+            itemView.toggle_favorite.isChecked = movie.isFavorite
             Glide.with(itemView).load(IMAGE_BASE + movie.poster).into(itemView.poster_detail)
 
             itemView.setOnClickListener(View.OnClickListener {
                 var id = Intent(itemView.context, DetailMovieActivity::class.java).apply {
-                    putExtra("imdb_id", movie.id)
+                    putExtra("id", movie.id)
                 }
                 itemView.context.startActivity(id)
             })

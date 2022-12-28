@@ -1,7 +1,9 @@
 package com.praktikum.tmdbmovies
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.praktikum.tmdbmovies.models.Movie
 import com.praktikum.tmdbmovies.models.MovieResponse
@@ -20,6 +22,12 @@ class MainActivity : AppCompatActivity() {
         movies_list.layoutManager = LinearLayoutManager(this)
         movies_list.setHasFixedSize(true)
         getMovieData { movies : List<Movie> -> movies_list.adapter = MovieAdapter(movies) }
+
+        val button: Button = findViewById(R.id.btn_favorite)
+        button.setOnClickListener{
+            val intent = Intent( this, FavoriteMovieActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun getMovieData(callback: (List<Movie>) -> Unit){
