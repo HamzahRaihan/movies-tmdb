@@ -1,8 +1,8 @@
-//package com.praktikum.tmdbmovies.models
-//
-//import com.google.gson.annotations.SerializedName
-//
-//class BaseResponse<T> {
-//    @SerializedName("results")
-//    val results: List<T>
-//}
+package com.praktikum.tmdbmovies.models
+
+import com.google.gson.annotations.SerializedName
+
+data class BaseResponse (
+    @SerializedName("results")
+    val results: List<Movie>
+)

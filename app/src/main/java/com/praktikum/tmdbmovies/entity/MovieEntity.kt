@@ -11,24 +11,23 @@ data class MovieEntity(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    val id: Int ?,
+    val id: Int,
 
     @ColumnInfo(name = "title")
-    val title: String ?,
+    val title: String,
 
     @ColumnInfo(name = "overview")
-    val overview: String?,
+    val overview: String,
 
     @ColumnInfo(name = "original_language")
-    val language: String?,
+    val language: String,
 
     @ColumnInfo(name = "poster_path")
-    val poster: String?,
+    val poster: String,
 
     @ColumnInfo(name = "release_date")
-    val release: String?,
+    val release: String,
 
     @ColumnInfo(name = "is_favorite")
     val isFavorite: Boolean = false,
-
-    )
+)
