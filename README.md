@@ -1,3 +1,3 @@
 # movies-tmdb
 
-tugas praktikum untuk UAS mata kuliah mobile programming
+tugas praktikum untuk UTS dan UAS mata kuliah mobile programming
