@@ -1,5 +1,7 @@
 package com.praktikum.tmdbmovies.entity
 
+// Hamzah Raihan Ikhsanul Fikri
+// 2010631250052
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
